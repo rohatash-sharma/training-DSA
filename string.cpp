@@ -12,7 +12,7 @@ int main(){
   es2="\\0";
   cout << es<<endl;
   cout << es2<<endl;
-  string vowel="aeiouAEIOU"
+  string vowel="aeiouAEIOU";
   int vcnt=0;
   int ccnt=0;
   for(int i=0;i<s.length();i++){
@@ -31,32 +31,32 @@ int main(){
     }
 
   }
-  string s="abbdcdbba"
+  string sp="abbdcdbba";
   char ch;
   cin>>ch;
-  for (int i=0;i<s.size();i++){
-    if (s[i]==ch){
-      s.erase(s.begin() + i);
+  for (int i=0;i<sp.size();i++){
+    if (sp[i]==ch){
+      sp.erase(sp.begin() + i);
     }
 
   }
-  for (int i=s.length();i>0;i--){
-    if(s[i]==ch){
-      s.erase(s.begin() + i);
+  for (int i=sp.length();i>0;i--){
+    if(sp[i]==ch){
+      sp.erase(sp.begin() + i);
     }
   }
-   int j=s.length();
+   int j=sp.length();
    int i=0;
    while (i<j){
-    swap(s[i],s[j]);
+    swap(sp[i],sp[j]);
     i++;
     j--;
    }
    int i=0;
-   itn j= s.length();
+   int j= sp.length();
    while(i<=j){
     int flag=0;
-    if(s[i]!=s[j]){
+    if(sp[i]!=sp[j]){
       flag=1;
       break;
     }
