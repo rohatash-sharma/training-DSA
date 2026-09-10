@@ -23,19 +23,28 @@ int main(){
       else{
         tail->next=newnode;
         tail=newnode;
-        
       }
     }
-
   }
   node *slow=head;
   node *fast=head;
+  node *mid=nullptr;
 
   while(fast!=nullptr && fast->next!=nullptr){
     slow=slow->next;
     fast=fast->next->next;
+    if(slow==fast){
+      cout<<"this is a cycle"<<endl;
+      mid=slow;
+      slow=head;
+      while(slow!=fast){
+        slow=slow->next;
+        fast=fast->next;
+
+      }
+      cout << "starting point is"<<slow->data<<endl;
+    }
   }
-  cout << "middle point is "<<slow->data;
-
-
+  cout << "middle point is "<<mid->data;
+  
 }
